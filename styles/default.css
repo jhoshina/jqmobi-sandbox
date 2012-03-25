@@ -1,0 +1,31 @@
+#toggle-nav {
+  float: right;
+}
+#search-form {
+  display: block;
+  text-align: center;
+  margin: 8px;
+}
+#search-form [type="search"] {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 200%;
+}
+.status {
+  display: -webkit-box;
+  height: auto;
+}
+.status > :first-child {
+  display: block;
+  width: 50px;
+  -webkit-box-sizing: border-box;
+  padding: 1px;
+}
+.status > :last-child {
+  -webkit-box-flex: 1;
+  -webkit-box-sizing: border-box;
+  padding: 4px 8px;
+}

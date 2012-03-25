@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Search with jqMobi</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="styles/icons.css" />
+    <link rel="stylesheet" href="styles/jq.ui.css" />
+    <link rel="stylesheet" href="styles/default.css" />
+  </head>
+  <body>
+    <div id="jQUi">
+      <div id="header">
+        <a href="#" id="toggle-nav" class="button" data-ignore="true">///</a>
+      </div>
+
+      <div id="content">
+        <div title="Welcome" id="main" class="panel" selected="true">
+          <ul>
+            <li>
+              <a href="#search-panel">Twitter Search</a>
+            </li>
+          </ul>
+        </div>
+
+        <div title="Twitter Search" id="search-panel" class="panel">
+          <form id="search-form" action="http://search.twitter.com/search.json" method="get">
+            <input id="search" type="search" name="q" placeholder="Input search word" />
+          </form>
+          <ul id="results">
+          </ul>
+          <script id="status-tmpl" type="text/x-jq-template">
+            <li class="status">
+              <figure>
+                <img src="<%= profile_image_url %>" />
+              </figure>
+              <div>
+                <span class="user_name"><%= from_user_name %></span>
+                <span class="screen_name">@<%= from_user %></span>
+                <div class="text"><%= text %></div>
+              </div>
+            </li>
+          </script>
+        </div>
+      </div>
+
+      <div id="navbar">
+        <div class="horzRule"></div>
+        <a href="#main" id="navbar_home" class="icon home">home</a>
+      </div>
+
+      <nav>
+        <div class="title">Home</div>
+        <ul>
+          <li class="icon home mini">
+            <a href="#main">Selectors</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="js/jq.ui.min.js"></script>
+    <script src="plugins/jq.template.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
